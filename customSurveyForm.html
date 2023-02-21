@@ -1,0 +1,21 @@
+<template>
+    <div class="card">
+        <div class="cover">
+            <h1>Survey</h1>
+            <p>Before we get started, we need some information about you.</p>
+        </div>
+        <div class="content">
+            <lightning-input type="text" label="Enter some text"></lightning-input>
+            <lightning-input type="text" label="Enter some text"></lightning-input>
+            <lightning-radio-group name="radioGroup" label="Radio Group" options={options} value={value}
+                type="radio"></lightning-radio-group>
+            <lightning-combobox name="progress" label="Status" value={value1} placeholder="Select Progress"
+                options={options1} onchange={handleChange}></lightning-combobox>
+            <lightning-dual-listbox name="languages" label="Select Languages" source-label="Available"
+                selected-label="Selected" field-level-help="Select your preferred languages" options={options2}
+                onchange={handleChange}></lightning-dual-listbox>
+            <button class="slds-button slds-button_brand slds-button_stretch slds-m-top_medium">Submit</button>
+            <button class="slds-button slds-button_neutral slds-button_stretch slds-m-top_medium">Reset</button>
+        </div>
+    </div>
+</template>
